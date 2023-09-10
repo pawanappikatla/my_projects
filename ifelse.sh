@@ -1,5 +1,5 @@
 #########
-#if else expression
+#if else expression example
 #########
 #!/bin/bash
 a=10
