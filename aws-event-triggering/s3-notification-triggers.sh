@@ -1,5 +1,11 @@
 #!/bin/bash
 
+#################
+# Author: PawanAppikatla
+# Date  : 10-09-2023
+# version: 1
+# usage  : in this script i use  s3  for storing object  , lamba function for event trigerring to sns to send the subscriber Email.
+##################
 set -x
 
 # Store the AWS account ID in a variable
@@ -13,7 +19,7 @@ aws_region="us-east-1"
 bucket_name="pawan-ultimate-bucket"
 lambda_func_name="s3-lambda-function"
 role_name="s3-lambda-sns"
-email_address="saipawan805@gmail.com"
+email_address="saipawan@gmail.com"
 
 # Create IAM Role for the project
 role_response=$(aws iam create-role --role-name s3-lambda-sns --assume-role-policy-document '{
@@ -104,6 +110,6 @@ aws sns subscribe \
 aws sns publish \
   --topic-arn "$topic_arn" \
   --subject "A new object created in s3 bucket" \
-  --message "Hello from Abhishek.Veeramalla YouTube channel, Learn DevOps Zero to Hero for Free"
+  --message "Hello from PawanAppikatla"
 
 
