@@ -4,7 +4,7 @@
 # Author: PawanAppikatla
 # Date  : 10-09-2023
 # version: 1
-# usage  : in this script i use  s3  for storing object  , lamba function for event trigerring to sns to send the subscriber Email.
+# usage  : in this script i use  s3  for storing object  , lambda function for event trigger to sns to send notification to subscriber Email.
 ##################
 set -x
 
